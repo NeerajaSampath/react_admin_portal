@@ -1,0 +1,14 @@
+version: "3"
+services:
+  loyalty-app:
+    # stdin_open: true
+    # tty: true
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+    environment:
+      - REACT_APP_NAME= Loyalty Program
+      - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_DEV_BASE_URL=https://dev-loyalty.m2pfintech.com/loyalty
